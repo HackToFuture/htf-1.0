@@ -30,15 +30,15 @@ export const header = {
 
 export const footer = {
   siteName: SITE?.name,
-  socialLinks: [
-    { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
-  ],
+  // socialLinks: [
+  //   { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+  //   { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+  //   { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: '#' },
+  //   { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+  //   { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
+  // ],
   footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://loremipsumt.com/"> loremipsumt</a> · All rights reserved.
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://github.com/sceptix-club"> The sceptix club</a> · All rights reserved.
   `,
 };

@@ -1,21 +1,21 @@
 export default {
-  name: 'Lorem ipsum',
-  site: 'https://hacktolight.vercel.app',
+  name: 'HackToFuture',
+  site: 'https://hacktofuture.in',
   base: '/',
   trailingSlash: false,
   metadata: {
     title: {
-      default: 'Lorem ipsum',
-      template: '%s — Lorem ipsum',
+      default: 'HackToFuture',
+      template: '%s - HackToFuture',
     },
     robots: {
       index: true,
       follow: true,
     },
     description:
-      '🚀 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      'Whether you are a seasoned professional or a newcomer to the tech world, Hack2Future is the perfect opportunity to showcase your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience that will inspire you and propel you towards your goals!',
     openGraph: {
-      siteName: 'Lorem ipsum',
+      siteName: 'HackToFuture',
       images: [
         {
           url: '~/assets/images/default.jpg',
@@ -26,8 +26,8 @@ export default {
       type: 'website',
     },
     twitter: {
-      handle: '@loremipsumt',
-      site: '@loremipsumt',
+      handle: '@hacktofuture',
+      site: '@hacktofuture',
       cardType: 'summary_large_image',
     },
   },

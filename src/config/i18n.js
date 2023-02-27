@@ -5,6 +5,6 @@ export default {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-    timeZone: 'UTC',
+    timeZone: 'Asia/Kolkata',
   }),
 };

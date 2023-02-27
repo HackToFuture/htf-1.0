@@ -37,8 +37,8 @@ const {
           )}
         >
         <Lottie LottieSource={icon} loop client:load/>
-          <div class={twMerge('text-xl font-bold', titleClass)}>{title}</div>
-          {description && <p class={twMerge('text-muted mt-2', descriptionClass)} set:html={description} />}
+          <div class={twMerge('text-xl font-bold', titleClass)}  style="color: #ffc300;">{title}</div>
+          {description && <p class={twMerge('text-muted mt-2 text-sm', descriptionClass)} set:html={description} />}
         </div>
       ))}
     </div>

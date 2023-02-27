@@ -15,75 +15,74 @@ import Prize from '~/components/widgets/Prize.astro';
 import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
-  title: 'Lorem ipsum — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+  title: 'HackToFuture',
   description: SITE.description,
   ignoreTitleTemplate: true,
 };
 ---
 <Layout {metadata}>
   <Hero
-  callToAction={{ text:"sfdgv", icon: 'tabler:download', href: ''}}>
+  callToAction={{ text:"Register Now", icon: '', href: '#'}}>
   <Fragment slot="title">
-    Lorem ipsum dolor sit amet.
+    <img src="src/assets/images/hack-to-future.png" alt="HackToFuture">
   </Fragment>
 
   <Fragment slot="subtitle">
     <span class="hidden sm:inline">
-    <span class="font-semibold">Lorem ipsum</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span>
-    <span class="block mb-1 sm:hidden font-bold">Lorem ipsum.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+    <span class="font-semibold">HackToFuture</span> is a 24 hour long hackathon, running from 25-26 April. Whether you are a seasoned professional or a newcomer to the tech world, HackToFuture is the perfect opportunity to showcase your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience that will inspire you and propel you towards your goals!</span>
   </Fragment>
   </Hero>
 
 <did id="about">
   <Content 
-  highlight="About us"
-  title="About SJEC"
-  descriptions={[
-    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
-    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
-    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.'
-  ]}
-  />
-  <Content
-  isAfterContent={true}
-  isReversed={true}
   title="About EG"
   descriptions={[
     'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
     'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
     'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.'
   ]}
+  image={{src: "src/assets/images/eg-logo.svg", alt: "EG Logo"}}
+  />
+  <Content
+  isAfterContent={true}
+  isReversed={true}
+  title="About SJEC"
+  descriptions={[
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.'
+  ]}
+  image={{src: "src/assets/images/sjec-logo-dark.png", alt: "SJEC Logo"}}
   />
 </did>
 
 <div id="themes">
   <Features
-      title="Lorem ipsum"
-      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
-      highlight="Lorem ipsum for the hackathon"
+      title="Themes"
+      subtitle="No problem is too big... and no idea is too small"
       items={[
        {
-          title: 'Lorem ipsum',
+          title: 'Energy and Sustainability',
          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+            'The world is facing unprecedented challenges related to the environment, and we believe that technology can play a crucial role in addressing these issues. This theme explores problems related to environmental issues (such as climate change), green technologies, energy conservation, renewable energy, reducing carbon emissions, and so on.',
           icon: First,
        },
        {
-          title: 'Lorem ipsum',
+          title: 'Social Innovation',
          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+            'This theme addresses social issues and the improvement of the well-being of people and communities. Participants can work on problems related to education, health, the environment, accessibility for disadvantaged groups, volunteering, safety, etc.',
           icon: Second,
        },
        {
-         title: 'Lorem ipsum',
+         title: 'Finance',
          description:
-           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+           'Participants must come up with solutions related to banking, insurance, investment management, and financial technology (fintech). Some of the key challenges facing the finance sector today include improving customer experience, increasing financial Inclusion and literacy, and ensuring data privacy and security. ',
          icon: Third,
         },
         {
-          title: 'Lorem ipsum',
+          title: 'Healthcare',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+            'The healthcare sector is continually evolving and growing, and with it comes many challenges and potential for new technologies, such as analysing healthcare data, data management and security, digital healthcare assistants, telemedicine, improving healthcare accessibility.',
           icon: Fourth,
        }
       ]}>
@@ -92,36 +91,39 @@ const metadata = {
 
 <div id="prize">
   <Prize 
-    title="Lorem ipsum"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    title="₹ 1,60,000"
+    subtitle="Win exciting goodies and cash prizes per theme."
   />
 </div>
 
 <div id="timeline">
   <Steps
-    title="Lorem ipsum"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
-    highlight="Lorem ipsum"
+    title="Timeline"
     items={[
       {
-        title: 'Lorem ipsum',
+        title: '01 March 2023',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          'Registrations begin!',
       },
       {
-        title: 'Lorem ipsum',
+        title: '10 March 2023',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          'Registrations close.',
       },
       {
-        title: 'Lorem ipsum',
+        title: '15 - 20 March 2023',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          'Preliminary rounds take place.',
       },
       {
-        title: 'Lorem ipsum',
+        title: '02 April 2023',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          'Shortlisted teams notified.',
+      },
+      {
+        title: '25 - 26 April 2023',
+        description:
+          'Grand Hackathon!',
       },
     ]}
   />
@@ -130,28 +132,32 @@ const metadata = {
 <div id="faq">
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
-    highlight="FAQs"
+    highlight="FAQ"
     items={[
       {
-        title: 'Lorem ipsum',
+        title: 'What is the HackToFuture Hackathon?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          'The HackToFuture hackathon is a 24 hour long coding event where students from all over Dakshina Kannada collaborate to work on and present solutions for problem statements based on certain themes.',
       },
       {
-        title: 'Lorem ipsum',
+        title: 'Will the hackathon be an online or offline event?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          'The preliminary rounds of the hackathon will be conducted online. The final event will be held in offline mode.',
       },
       {
-        title: 'Lorem ipsum',
+        title: 'Who can participate?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          'Hack2Future is open to all BE, B. Tech, BCA, MBA and MCA students from Udupi and Dakshina Kannada.',
       },
       {
-        title: 'Lorem ipsum',
+        title: 'Do I have to pay to participate?',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          'Absolutely not! Participation is completely free.',
+      },
+      {
+        title: 'What is the team size to participate in the hackathon?',
+        description:
+          'Participants can participate individually, or in teams of 2 or 3.',
       },
     ]}
   />

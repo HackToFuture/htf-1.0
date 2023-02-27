@@ -1,0 +1,159 @@
+---
+import SITE from '~/utils/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+import First from '~/assets/lottie/first.lottie';
+import Second from '~/assets/lottie/second.lottie';
+import Third from '~/assets/lottie/third.lottie';
+import Fourth from '~/assets/lottie/fourth.lottie';
+import Prize from '~/components/widgets/Prize.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Lorem ipsum — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+  description: SITE.description,
+  ignoreTitleTemplate: true,
+};
+---
+<Layout {metadata}>
+  <Hero
+  callToAction={{ text:"sfdgv", icon: 'tabler:download', href: ''}}>
+  <Fragment slot="title">
+    Lorem ipsum dolor sit amet.
+  </Fragment>
+
+  <Fragment slot="subtitle">
+    <span class="hidden sm:inline">
+    <span class="font-semibold">Lorem ipsum</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span>
+    <span class="block mb-1 sm:hidden font-bold">Lorem ipsum.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+  </Fragment>
+  </Hero>
+
+<did id="about">
+  <Content 
+  highlight="About us"
+  title="About SJEC"
+  descriptions={[
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.'
+  ]}
+  />
+  <Content
+  isAfterContent={true}
+  isReversed={true}
+  title="About EG"
+  descriptions={[
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+    'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.'
+  ]}
+  />
+</did>
+
+<div id="themes">
+  <Features
+      title="Lorem ipsum"
+      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+      highlight="Lorem ipsum for the hackathon"
+      items={[
+       {
+          title: 'Lorem ipsum',
+         description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          icon: First,
+       },
+       {
+          title: 'Lorem ipsum',
+         description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          icon: Second,
+       },
+       {
+         title: 'Lorem ipsum',
+         description:
+           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+         icon: Third,
+        },
+        {
+          title: 'Lorem ipsum',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+          icon: Fourth,
+       }
+      ]}>
+  </Features>
+</div>
+
+<div id="prize">
+  <Prize 
+    title="Lorem ipsum"
+    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+  />
+</div>
+
+<div id="timeline">
+  <Steps
+    title="Lorem ipsum"
+    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    highlight="Lorem ipsum"
+    items={[
+      {
+        title: 'Lorem ipsum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      },
+      {
+        title: 'Lorem ipsum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      },
+      {
+        title: 'Lorem ipsum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      },
+      {
+        title: 'Lorem ipsum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      },
+    ]}
+  />
+</div>
+
+<div id="faq">
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    highlight="FAQs"
+    items={[
+      {
+        title: 'Lorem ipsum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      },
+      {
+        title: 'Lorem ipsum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      },
+      {
+        title: 'Lorem ipsum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      },
+      {
+        title: 'Lorem ipsum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      },
+    ]}
+  />
+</div>
+</Layout>

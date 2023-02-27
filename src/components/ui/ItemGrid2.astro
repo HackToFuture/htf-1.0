@@ -1,0 +1,46 @@
+---
+import { twMerge } from 'tailwind-merge';
+import Lottie from '~/components/Lottie';
+
+interface Item {
+  title?: string;
+  description?: string;
+  icon?: string;
+  iconClass?: string;
+}
+
+export interface Props {
+  items?: Array<Item>;
+  defaultIcon?: string;
+  classes?: Record<string, string>;
+}
+
+const { items = [], classes = {} } = Astro.props;
+
+const {
+  container: containerClass = 'sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+  panel: panelClass = 'text-center items-center',
+  title: titleClass = '',
+  description: descriptionClass = '',
+} = classes;
+---
+
+{
+  items && (
+    <div class={twMerge('grid gap-8', containerClass)}>
+      {
+        items.map(({ title, description, icon }) => (
+        <div
+          class={twMerge(
+            'relative flex flex-col text-center items-center transition duration-300 ease-in-out delay-150 transform shadow-2xl md:hover:-translate-y-8',
+            panelClass
+          )}
+        >
+        <Lottie LottieSource={icon} loop client:load/>
+          <div class={twMerge('text-xl font-bold', titleClass)}>{title}</div>
+          {description && <p class={twMerge('text-muted mt-2', descriptionClass)} set:html={description} />}
+        </div>
+      ))}
+    </div>
+  )
+}

@@ -4,12 +4,12 @@ import { getPermalink } from '../utils/permalinks';
 export const header = {
   links: [
     {
-      text: 'Themes',
-      href: getPermalink('#themes'),
-    },
-    {
       text: 'Prize',
       href: getPermalink('#prize'),
+    },
+    {
+      text: 'Themes',
+      href: getPermalink('#themes'),
     },
     {
       text: 'Timeline',

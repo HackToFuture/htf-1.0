@@ -13,7 +13,7 @@ export default {
       follow: true,
     },
     description:
-      'Whether you are a seasoned professional or a newcomer to the tech world, Hack2Future is the perfect opportunity to showcase your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience that will inspire you and propel you towards your goals!',
+      'Whether you are a seasoned professional or a newcomer to the tech world, HackToFuture is the perfect opportunity to showcase your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience that will inspire you and propel you towards your goals!',
     openGraph: {
       siteName: 'HackToFuture',
       images: [

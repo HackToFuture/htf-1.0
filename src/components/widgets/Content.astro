@@ -51,6 +51,29 @@ const {
   </div>
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
+      
+      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+        {
+          image && (
+            <div class="relative m-auto max-w-4xl">
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Picture
+                  class="mx-auto my-16 px-15 w-half rounded-lg"
+                  width={320}
+                  height={320}
+                  widths={[400, 768]}
+                  sizes="(max-width: 768px) 100vw, 432px"
+                  aspectRatio="1:1"
+                  {...image}
+                />
+              )}
+            </div>
+          )
+        }
+      </div>
+
       <div class="md:basis-1/2 self-center">
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
         {
@@ -67,27 +90,7 @@ const {
           )
         }
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
-        {
-          image && (
-            <div class="relative m-auto max-w-4xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Picture
-                  class="mx-auto px-15 w-half rounded-lg"
-                  width={320}
-                  height={320}
-                  widths={[400, 768]}
-                  sizes="(max-width: 768px) 100vw, 432px"
-                  aspectRatio="1:1"
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
-      </div>
+
     </div>
   </div>
 </section>

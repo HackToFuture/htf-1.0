@@ -23,7 +23,7 @@ export const header = {
   actions: [
     {
       text: 'Register',
-      link: 'https://unstop.com/o/KWVGfmB?lb=ZUPlIc1'
+      href: 'https://unstop.com/o/KWVGfmB?lb=ZUPlIc1'
     }
   ]
 };

@@ -31,7 +31,7 @@ const { socialLinks = [], footNote = '', isDark = false } = Astro.props;
   </div>
   <div class:list={['relative max-w-7xl mx-auto px-4 md:px-6 text-default', { dark: isDark }]}>
     <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
-      <slot name="bg-inside"></slot>
+      <slot name="bg-inside" />
     </div>
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
       {

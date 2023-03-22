@@ -18,14 +18,14 @@ export const header = {
     {
       text: 'FAQ',
       href: getPermalink('#faq'),
-    }
+    },
   ],
   actions: [
     {
       text: 'Register',
-      href: 'https://unstop.com/o/KWVGfmB?lb=ZUPlIc1'
-    }
-  ]
+      href: 'https://unstop.com/o/KWVGfmB?lb=ZUPlIc1',
+    },
+  ],
 };
 
 export const footer = {

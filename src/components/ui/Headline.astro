@@ -8,7 +8,11 @@ const {
   classes = {},
 } = Astro.props;
 
-const { container: containerClass = 'max-w-3xl', title: titleClass = 'text-4xl md:text-5xl ', subtitle: subtitleClass = 'text-xl' } = classes;
+const {
+  container: containerClass = 'max-w-3xl',
+  title: titleClass = 'text-4xl md:text-5xl ',
+  subtitle: subtitleClass = 'text-xl',
+} = classes;
 ---
 
 {
@@ -19,12 +23,12 @@ const { container: containerClass = 'max-w-3xl', title: titleClass = 'text-4xl m
       )}
       {title && (
         <h2
-          class={twMerge("font-bold leading-tighter tracking-tighter font-heading text-heading", titleClass)}
+          class={twMerge('font-bold leading-tighter tracking-tighter font-heading text-heading', titleClass)}
           set:html={title}
         />
       )}
 
-      {subtitle && <p class={twMerge("mt-4 text-muted",subtitleClass)} set:html={subtitle} />}
+      {subtitle && <p class={twMerge('mt-4 text-muted', subtitleClass)} set:html={subtitle} />}
     </div>
   )
 }

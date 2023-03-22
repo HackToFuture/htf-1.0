@@ -1,36 +1,31 @@
 @font-face {
-    font-family: 'Gandhi Sans';
-    src: url('GandhiSans-BoldItalic.woff2') format('woff2'),
-        url('GandhiSans-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'Gandhi Sans';
+  src: url('GandhiSans-BoldItalic.woff2') format('woff2'), url('GandhiSans-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Gandhi Sans';
-    src: url('GandhiSans-Italic.woff2') format('woff2'),
-        url('GandhiSans-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'Gandhi Sans';
+  src: url('GandhiSans-Italic.woff2') format('woff2'), url('GandhiSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Gandhi Sans';
-    src: url('GandhiSans-Bold.woff2') format('woff2'),
-        url('GandhiSans-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Gandhi Sans';
+  src: url('GandhiSans-Bold.woff2') format('woff2'), url('GandhiSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Gandhi Sans';
-    src: url('GandhiSans-Regular.woff2') format('woff2'),
-        url('GandhiSans-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Gandhi Sans';
+  src: url('GandhiSans-Regular.woff2') format('woff2'), url('GandhiSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-

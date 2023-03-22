@@ -82,10 +82,14 @@ import UI from '~/config/ui';
     attachEvent([document], 'scroll', function () {
       const st = window.scrollY;
 
-      if (st > lastKnownScrollPosition && st > 120 && !document.getElementById('header').classList.contains("expanded") ) {
-        document.getElementById('header').classList.add("opacity-0")
+      if (
+        st > lastKnownScrollPosition &&
+        st > 120 &&
+        !document.getElementById('header').classList.contains('expanded')
+      ) {
+        document.getElementById('header').classList.add('opacity-0');
       } else if (st < lastKnownScrollPosition) {
-        document.getElementById('header').classList.remove("opacity-0")
+        document.getElementById('header').classList.remove('opacity-0');
       }
 
       lastKnownScrollPosition = window.scrollY;

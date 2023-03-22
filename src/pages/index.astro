@@ -20,161 +20,168 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 ---
-<Layout {metadata}>
-  <Hero
-  callToAction={{ text:"Register Now", icon: '', href: 'https://unstop.com/o/KWVGfmB?lb=ZUPlIc1'}}>
-  <Fragment slot="title">
-    <img src="https://cdn.discordapp.com/attachments/1074270657426239488/1081824289067630632/hack-to-future.png" alt="HackToFuture">
-  </Fragment>
 
-  <Fragment slot="subtitle">
-    <span class="hidden sm:inline">
-    <span class="font-semibold">HackToFuture</span> is a 24 hour long hackathon, running from 25-26 April. Whether you are a seasoned professional or a newcomer to the tech world, HackToFuture is the perfect opportunity to showcase your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience that will inspire you and propel you towards your goals!</span>
-  </Fragment>
+<Layout {metadata}>
+  <Hero callToAction={{ text: 'Register Now', icon: '', href: 'https://unstop.com/o/KWVGfmB?lb=ZUPlIc1' }}>
+    <Fragment slot="title">
+      <img
+        src="https://cdn.discordapp.com/attachments/1074270657426239488/1081824289067630632/hack-to-future.png"
+        alt="HackToFuture"
+      />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">HackToFuture</span> is a 24 hour long hackathon, running from 25-26 April. Whether you
+        are a seasoned professional or a newcomer to the tech world, HackToFuture is the perfect opportunity to showcase
+        your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience
+        that will inspire you and propel you towards your goals!</span
+      >
+    </Fragment>
   </Hero>
 
-<did id="about">
-  <Content 
-  title="About EG"
-  descriptions={[
-    'EG provides Nordic vertical software that enables customers to further develop their business. EG has more than 1,700 employees who primarily work at locations in the Nordic countries and at a joint development center in Poland. EG develops, delivers and services their own software for more than 26,000 customers in the private and public sectors. Since 1978 they have brought enduring innovation year after year to the Scandinavian market within the industries.',
-    'Vision - We enable our customers to become industry leaders.',
-    'Mission - We build market leading vertical software.'
-  ]}
-  image={{src: "https://cdn.discordapp.com/attachments/1074270657426239488/1081826855700676618/eg-logo.png", alt: "EG Logo"}}
-  link="https://global.eg.dk/"
-  />
-  <Content
-  isAfterContent={true}
-  isReversed={true}
-  title="About SJEC"
-  descriptions={[
-    'St Joseph Engineering College (SJEC), Mangaluru, established in 2002, is a premier educational institution and a hub for Creativity and Innovations in Engineering. SJEC is an autonomous institution accredited by the All India Council for Technical Education (AICTE), New Delhi, and affiliated with Visvesvaraya Technological University, Karnataka. The institution recently received an A+ grade from the National Assessment and Accreditation Council. The National Board of Accreditation, New Delhi, has also granted accreditation to the institution’s programs in CSE, ME, ECE, EEE, Civil engineering, and MBA. The sprawling lush green SJEC campus is located 10 Km away from the City of Mangalore and is known for its picturesque beauty. The campus is a hub for innovators and SJEC students have made a mark for themselves in national and internal championships of repute.'
-  ]}
-  image={{src: "https://cdn.discordapp.com/attachments/1074270657426239488/1081826855948124330/sjec-logo.png", alt: "SJEC Logo"}}
-  link="https://sjec.ac.in/"
-  />
-</did>
+  <did id="about">
+    <Content
+      title="About EG"
+      descriptions={[
+        'EG provides Nordic vertical software that enables customers to further develop their business. EG has more than 1,700 employees who primarily work at locations in the Nordic countries and at a joint development center in Poland. EG develops, delivers and services their own software for more than 26,000 customers in the private and public sectors. Since 1978 they have brought enduring innovation year after year to the Scandinavian market within the industries.',
+        'Vision - We enable our customers to become industry leaders.',
+        'Mission - We build market leading vertical software.',
+      ]}
+      image={{
+        src: 'https://cdn.discordapp.com/attachments/1074270657426239488/1081826855700676618/eg-logo.png',
+        alt: 'EG Logo',
+      }}
+      link="https://global.eg.dk/"
+    />
+    <Content
+      isAfterContent={true}
+      isReversed={true}
+      title="About SJEC"
+      descriptions={[
+        'St Joseph Engineering College (SJEC), Mangaluru, established in 2002, is a premier educational institution and a hub for Creativity and Innovations in Engineering. SJEC is an autonomous institution accredited by the All India Council for Technical Education (AICTE), New Delhi, and affiliated with Visvesvaraya Technological University, Karnataka. The institution recently received an A+ grade from the National Assessment and Accreditation Council. The National Board of Accreditation, New Delhi, has also granted accreditation to the institution’s programs in CSE, ME, ECE, EEE, Civil engineering, and MBA. The sprawling lush green SJEC campus is located 10 Km away from the City of Mangalore and is known for its picturesque beauty. The campus is a hub for innovators and SJEC students have made a mark for themselves in national and internal championships of repute.',
+      ]}
+      image={{
+        src: 'https://cdn.discordapp.com/attachments/1074270657426239488/1081826855948124330/sjec-logo.png',
+        alt: 'SJEC Logo',
+      }}
+      link="https://sjec.ac.in/"
+    />
+  </did>
 
-<div id="prize">
-  <Prize 
-    title="₹ 1,60,000"
-    subtitle="Win exciting goodies and cash prizes per theme.<br>Sponsored by EGDK India Pvt Ltd."
-  />
-</div>
+  <div id="prize">
+    <Prize
+      title="₹ 1,60,000"
+      subtitle="Win exciting goodies and cash prizes per theme.<br>Sponsored by EGDK India Pvt Ltd."
+    />
+  </div>
 
-<div id="themes">
-  <Features
+  <div id="themes">
+    <Features
       title="Themes"
       subtitle=""
       items={[
-       {
+        {
           title: 'Energy and Sustainability',
-         description:
+          description:
             'The world is facing unprecedented challenges related to the environment, and we believe that technology can play a crucial role in addressing these issues. This theme explores problems related to environmental issues (such as climate change), green technologies, energy conservation, renewable energy, reducing carbon emissions, and so on.',
           icon: First,
-          link: "https://global.eg.dk/it/eg-enerkey/",
-       },
-       {
+          link: 'https://global.eg.dk/it/eg-enerkey/',
+        },
+        {
           title: 'Social Innovation',
-         description:
+          description:
             'This theme addresses social issues and the improvement of the well-being of people and communities. Participants can work on problems related to education, health, the environment, accessibility for disadvantaged groups, volunteering, safety, etc.',
           icon: Second,
-          link: "https://global.eg.dk/public/",
-       },
-       {
-         title: 'Finance',
-         description:
-           'Participants must come up with solutions related to banking, insurance, investment management, and financial technology (fintech). Some of the key challenges facing the finance sector today include improving customer experience, increasing financial Inclusion and literacy, and ensuring data privacy and security. ',
-         icon: Third,
-         link: "https://global.eg.dk/it/retail/",
+          link: 'https://global.eg.dk/public/',
+        },
+        {
+          title: 'Finance',
+          description:
+            'Participants must come up with solutions related to banking, insurance, investment management, and financial technology (fintech). Some of the key challenges facing the finance sector today include improving customer experience, increasing financial Inclusion and literacy, and ensuring data privacy and security. ',
+          icon: Third,
+          link: 'https://global.eg.dk/it/retail/',
         },
         {
           title: 'Healthcare',
           description:
             'The healthcare sector is continually evolving and growing, and with it comes many challenges and potential for new technologies, such as analysing healthcare data, data management and security, digital healthcare assistants, telemedicine, improving healthcare accessibility.',
           icon: Fourth,
-          link: "https://global.eg.dk/it/eg-healthcare/",
-       }
-      ]}>
-  </Features>
-</div>
+          link: 'https://global.eg.dk/it/eg-healthcare/',
+        },
+      ]}
+    />
+  </div>
 
-<div id="timeline">
-  <Steps
-    title="Timeline"
-    items={[
-      {
-        title: '10 March 2023',
-        description:
-          'Registrations begin!',
-        icon: 'ri:article-line'
-      },
-      {
-        title: '31 March 2023',
-        description:
-          'Registrations close.',
-        icon: 'ri:alert-line'
-      },
-      {
-        title: '10 - 12 April 2023',
-        description:
-          'Preliminary rounds take place.',
-        icon: 'ri:ball-pen-line'
-      },
-      {
-        title: '15 April 2023',
-        description:
-          'Shortlisted teams notified.',
-        icon: 'ri:mail-line'
-      },
-      {
-        title: '25 - 26 April 2023',
-        description:
-          'Grand Hackathon!',
-        icon: 'ri:computer-line'
-      },
-    ]}
-    image={{src: "https://cdn.discordapp.com/attachments/1074270657426239488/1081879976384679996/icon.png", alt: "Calendar"}}
-  />
-</div>
+  <div id="timeline">
+    <Steps
+      title="Timeline"
+      items={[
+        {
+          title: '10 March 2023',
+          description: 'Registrations begin!',
+          icon: 'ri:article-line',
+        },
+        {
+          title: '31 March 2023',
+          description: 'Registrations close.',
+          icon: 'ri:alert-line',
+        },
+        {
+          title: '10 - 12 April 2023',
+          description: 'Preliminary rounds take place.',
+          icon: 'ri:ball-pen-line',
+        },
+        {
+          title: '15 April 2023',
+          description: 'Shortlisted teams notified.',
+          icon: 'ri:mail-line',
+        },
+        {
+          title: '25 - 26 April 2023',
+          description: 'Grand Hackathon!',
+          icon: 'ri:computer-line',
+        },
+      ]}
+      image={{
+        src: 'https://cdn.discordapp.com/attachments/1074270657426239488/1081879976384679996/icon.png',
+        alt: 'Calendar',
+      }}
+    />
+  </div>
 
-<div id="faq">
-  <FAQs
-    title="Frequently Asked Questions"
-    highlight="FAQ"
-    items={[
-      {
-        title: 'What is the HackToFuture Hackathon?',
-        description:
-          'The HackToFuture hackathon is a 24 hour long coding event where students collaborate to work on and present solutions for problem statements based on certain themes.',
-      },
-      {
-        title: 'Will the hackathon be an online or offline event?',
-        description:
-          'The preliminary rounds of the hackathon will be conducted online. The final event will be held in offline mode.',
-      },
-      {
-        title: 'Who can participate?',
-        description:
-          'HackToFuture is open to all BE, B. Tech, BCA, MCA and MBA students in and around Karnataka.',
-      },
-      {
-        title: 'Do I have to pay to participate?',
-        description:
-          'Absolutely not! Participation is completely free.',
-      },
-      {
-        title: 'What is the team size to participate in the hackathon?',
-        description:
-          'Participants can participate individually, or in teams of 2 or 3.',
-      },
-      {
-        title: 'Are inter-college teams allowed?',
-        description:
-          'Yes, so are inter-specialisation teams.',
-      },
-    ]}
-  />
-</div>
+  <div id="faq">
+    <FAQs
+      title="Frequently Asked Questions"
+      highlight="FAQ"
+      items={[
+        {
+          title: 'What is the HackToFuture Hackathon?',
+          description:
+            'The HackToFuture hackathon is a 24 hour long coding event where students collaborate to work on and present solutions for problem statements based on certain themes.',
+        },
+        {
+          title: 'Will the hackathon be an online or offline event?',
+          description:
+            'The preliminary rounds of the hackathon will be conducted online. The final event will be held in offline mode.',
+        },
+        {
+          title: 'Who can participate?',
+          description: 'HackToFuture is open to all BE, B. Tech, BCA, MCA and MBA students in and around Karnataka.',
+        },
+        {
+          title: 'Do I have to pay to participate?',
+          description: 'Absolutely not! Participation is completely free.',
+        },
+        {
+          title: 'What is the team size to participate in the hackathon?',
+          description: 'Participants can participate individually, or in teams of 2 or 3.',
+        },
+        {
+          title: 'Are inter-college teams allowed?',
+          description: 'Yes, so are inter-specialisation teams.',
+        },
+      ]}
+    />
+  </div>
 </Layout>

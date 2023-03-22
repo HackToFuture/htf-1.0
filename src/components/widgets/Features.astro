@@ -5,6 +5,7 @@ import ItemGrid2 from '~/components/ui/ItemGrid2.astro';
 interface Item {
   title?: string;
   description?: string;
+  link?: string;
   icon?: string;
   iconClass?: string;
 }
@@ -20,6 +21,7 @@ export interface Props {
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
+  link = await Astro.slots.render('link'),
   highlight,
   items = [],
   isDark = false,

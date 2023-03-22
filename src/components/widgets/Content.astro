@@ -6,6 +6,7 @@ export interface Props {
   subtitle?: string;
   highlight?: string;
   content?: string;
+  link?: string;
   descriptions?: string[];
   image?: string | any;
   isReversed?: boolean;
@@ -15,6 +16,7 @@ export interface Props {
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
+  link = await Astro.slots.render('link'),
   highlight,
   content = await Astro.slots.render('content'),
   descriptions= [],
@@ -55,6 +57,7 @@ const {
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
         {
           image && (
+            <a href={link} target="_blank">
             <div class="relative m-auto max-w-4xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
@@ -70,6 +73,7 @@ const {
                 />
               )}
             </div>
+            </a>
           )
         }
       </div>

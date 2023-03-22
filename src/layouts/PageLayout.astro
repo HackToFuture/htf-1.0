@@ -21,7 +21,16 @@ const { metadata } = Astro.props;
     <slot />
   </main>
   <slot name="footer">
-    <Footer {...footer}>
+    <Footer {...footer}
+    socialLinks={[
+      {
+        text: "Instagram",
+        href: "https://instagram.com/hack_to_future",
+        ariaLabel: "Instagram Button",
+        icon: "ri-instagram-line",
+      },
+    ]}
+    >
     </Footer>
   </slot>
 </Layout>

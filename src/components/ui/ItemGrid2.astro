@@ -5,6 +5,7 @@ import Lottie from '~/components/Lottie';
 interface Item {
   title?: string;
   description?: string;
+  link?: string;
   icon?: string;
   iconClass?: string;
 }
@@ -29,7 +30,8 @@ const {
   items && (
     <div class={twMerge('grid gap-8', containerClass)}>
       {
-        items.map(({ title, description, icon }) => (
+        items.map(({ title, description, icon, link }) => (
+         
         <div
           class={twMerge(
             'relative flex flex-col text-center items-center transition duration-300 ease-in-out delay-150 transform shadow-2xl md:hover:-translate-y-8',
@@ -37,9 +39,12 @@ const {
           )}
         >
         <Lottie LottieSource={icon} loop client:load/>
+        <a href={link} target="_blank">
           <div class={twMerge('text-xl font-bold', titleClass)}  style="color: #ffc300;">{title}</div>
+        </a>
           {description && <p class={twMerge('text-muted mt-2 text-sm', descriptionClass)} set:html={description} />}
         </div>
+        
       ))}
     </div>
   )

@@ -20,7 +20,6 @@ export const cleanSlug = (text = '') =>
     .map((slug) => slugify(slug))
     .join('/');
 
-
 export const getCanonical = (path = ''): string | URL => new URL(path, SITE.site);
 
 export const getPermalink = (slug = '', type = 'page'): string => {
@@ -42,10 +41,9 @@ export const getPermalink = (slug = '', type = 'page'): string => {
 
 export const getId = (id = ''): void => {
   return document.getElementById(id)?.scrollIntoView(true);
-}
+};
 
 export const getHomePermalink = (): string => getPermalink('/');
-
 
 export const getAsset = (path: string): string =>
   '/' +

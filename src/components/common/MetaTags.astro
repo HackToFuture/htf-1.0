@@ -75,7 +75,8 @@ const seoProps: AstroSeoProps = merge(
     canonical: canonical,
     noindex: true,
     nofollow: true,
-    description: 'Whether you are a seasoned professional or a newcomer to the tech world, Hack2Future is the perfect opportunity to showcase your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience that will inspire you and propel you towards your goals!',
+    description:
+      'Whether you are a seasoned professional or a newcomer to the tech world, Hack2Future is the perfect opportunity to showcase your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience that will inspire you and propel you towards your goals!',
     openGraph: {
       url: canonical,
       siteName: SITE?.name,
@@ -108,4 +109,5 @@ const seoProps: AstroSeoProps = merge(
   }
 );
 ---
+
 <AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph) }} />

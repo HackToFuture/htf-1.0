@@ -11,7 +11,6 @@
   }
 }
 
-
 @layer utilities {
   .mark {
     position: relative;
@@ -20,7 +19,7 @@
   .mark-none:after {
     display: none;
   }
-  
+
   .mark-underline:after,
   .mark-underline.mark-none:after {
     display: block;

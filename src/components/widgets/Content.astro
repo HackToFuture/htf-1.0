@@ -6,6 +6,7 @@ export interface Props {
   subtitle?: string;
   highlight?: string;
   content?: string;
+  link?: string;
   descriptions?: string[];
   image?: string | any;
   isReversed?: boolean;
@@ -15,9 +16,10 @@ export interface Props {
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
+  link = await Astro.slots.render('link'),
   highlight,
   content = await Astro.slots.render('content'),
-  descriptions= [],
+  descriptions = [],
   image = await Astro.slots.render('image'),
   isReversed = false,
   isAfterContent = false,
@@ -51,25 +53,26 @@ const {
   </div>
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-      
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
         {
           image && (
-            <div class="relative m-auto max-w-4xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Picture
-                  class="mx-auto my-16 px-15 w-half rounded-lg"
-                  width={320}
-                  height={320}
-                  widths={[400, 768]}
-                  sizes="(max-width: 768px) 100vw, 432px"
-                  aspectRatio="1:1"
-                  {...image}
-                />
-              )}
-            </div>
+            <a href={link} target="_blank">
+              <div class="relative m-auto max-w-4xl">
+                {typeof image === 'string' ? (
+                  <Fragment set:html={image} />
+                ) : (
+                  <Picture
+                    class="mx-auto my-16 px-15 w-half rounded-lg"
+                    width={320}
+                    height={320}
+                    widths={[400, 768]}
+                    sizes="(max-width: 768px) 100vw, 432px"
+                    aspectRatio="1:1"
+                    {...image}
+                  />
+                )}
+              </div>
+            </a>
           )
         }
       </div>
@@ -90,7 +93,6 @@ const {
           )
         }
       </div>
-
     </div>
   </div>
 </section>

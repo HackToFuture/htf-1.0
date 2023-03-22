@@ -40,7 +40,7 @@ export default defineConfig({
   ],
 
   vite: {
-    assetsInclude: "**/*.lottie",
+    assetsInclude: '**/*.lottie',
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),

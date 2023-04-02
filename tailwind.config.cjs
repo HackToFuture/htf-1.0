@@ -3,6 +3,7 @@
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
   plugins: [
+    require("daisyui"),
     require('@tailwindcss/typography'),
     require('./lib/index')({
       tokens: {

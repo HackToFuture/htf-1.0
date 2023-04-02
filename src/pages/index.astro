@@ -3,6 +3,7 @@ import SITE from '~/utils/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import CountDown from '~/components/widgets/Countdown.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -37,6 +38,15 @@ const metadata = {
         your skills, make new connections, and work towards a better future. Join us for an unforgettable 24-hour experience
         that will inspire you and propel you towards your goals!</span
       >
+      <br />
+      <br />
+      
+      <span class="ext-sm sm:text-lg font-semibold">
+        Application Closes in
+        <CountDown />
+      </span>
+      
+      <br />
     </Fragment>
   </Hero>
 

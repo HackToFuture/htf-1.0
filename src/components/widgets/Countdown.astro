@@ -1,0 +1,78 @@
+<countdown-timer target="April 6, 2023 18:30:00 UTC"></countdown-timer>
+
+<script is:inline>
+  class CountdownTimer extends HTMLElement {
+    updateTimer() {
+      this.secondsLeft = Math.round((this.target.getTime() - Date.now()) / 1000);
+      if (this.secondsLeft <= 0) {
+        this.timeDisplay.innerHTML = '';
+        this.textDisplay.innerHTML = 'Registeration has closed';
+        return;
+      }
+      const daysLeft = Math.floor(this.secondsLeft / 86400);
+      const hoursLeft = Math.floor((this.secondsLeft % 86400) / 3600);
+      const minutesLeft = Math.floor((this.secondsLeft % 3600) / 60);
+      const secondsLeft = this.pad(this.secondsLeft % 60);
+  
+      this.daysDisplay.style.setProperty('--value', daysLeft);
+      this.hoursDisplay.style.setProperty('--value', hoursLeft);
+      this.minutesDisplay.style.setProperty('--value', minutesLeft);
+      this.secondsDisplay.style.setProperty('--value', secondsLeft);
+    }
+  
+    pad(number) {
+      return number.toString().padStart(2, '0');
+    }
+  
+    startCountdown() {
+      this.updateTimer();
+      const counter = window.setInterval(() => {
+        this.updateTimer();
+        if (this.secondsLeft <= 0) window.clearInterval(counter);
+      }, 1000);
+    }
+  
+    connectedCallback() {
+      this.target = new Date(this.getAttribute('target'));
+      this.innerHTML = `
+      <br />
+      <br />
+      <div class="flex justify-center lg:justify-start gap-5">
+  <div>
+    <span class="countdown font-mono text-4xl">
+      <span class="days-left" style="--value:0;"></span>
+    </span>
+    days
+  </div> 
+  <div>
+    <span class="countdown font-mono text-4xl">
+      <span class="hours-left" style="--value:0;"></span>
+    </span>
+    hours
+  </div> 
+  <div>
+    <span class="countdown font-mono text-4xl">
+      <span class="minutes-left" style="--value:0;"></span>
+    </span>
+    min
+  </div> 
+  <div>
+    <span class="countdown font-mono text-4xl">
+      <span class="seconds-left" style="--value:0;"></span>
+    </span>
+    sec
+  </div>
+</div>
+      `;
+      this.daysDisplay = this.querySelector('.days-left');
+      this.hoursDisplay = this.querySelector('.hours-left');
+      this.minutesDisplay = this.querySelector('.minutes-left');
+      this.secondsDisplay = this.querySelector('.seconds-left');
+      this.startCountdown();
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    window.customElements.define('countdown-timer', CountdownTimer);
+  })
+</script>

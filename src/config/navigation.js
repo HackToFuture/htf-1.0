@@ -20,12 +20,7 @@ export const header = {
       href: getPermalink('#faq'),
     },
   ],
-  actions: [
-    {
-      text: 'Register',
-      href: 'https://unstop.com/o/KWVGfmB?lb=ZUPlIc1',
-    },
-  ],
+  actions: [],
 };
 
 export const footer = {

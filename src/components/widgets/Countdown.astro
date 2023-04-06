@@ -1,4 +1,4 @@
-<countdown-timer target="April 6, 2023 18:30:00 UTC"></countdown-timer>
+<countdown-timer target="April 25, 2023 04:30:00 UTC"></countdown-timer>
 
 <script is:inline>
   class CountdownTimer extends HTMLElement {
@@ -6,7 +6,7 @@
       this.secondsLeft = Math.round((this.target.getTime() - Date.now()) / 1000);
       if (this.secondsLeft <= 0) {
         this.timeDisplay.innerHTML = '';
-        this.textDisplay.innerHTML = 'Registeration has closed';
+        this.textDisplay.innerHTML = 'Hackathon has ended';
         return;
       }
       const daysLeft = Math.floor(this.secondsLeft / 86400);

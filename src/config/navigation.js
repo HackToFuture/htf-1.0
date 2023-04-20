@@ -19,6 +19,10 @@ export const header = {
       text: 'FAQ',
       href: getPermalink('#faq'),
     },
+    {
+      text: 'Criteria',
+      href: 'https://drive.google.com/file/d/1nAd7G8zFlstdi31jyJMX7gafvsFcT2tf/view'
+    }
   ],
   actions: [],
 };

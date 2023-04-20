@@ -114,3 +114,13 @@ const { links = [], actions = [], isSticky = false, showToggleTheme = false, pos
     </div>
   </div>
 </header>
+<script>
+  // add scroll event listener to window object
+  window.addEventListener('scroll', function() {
+    // check if the user has scrolled to the end of the page
+    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+      // remove the "md:hidden" class from the nav element to close the navbar
+      document.querySelector('nav')!.classList.remove('md:hidden');
+    }
+  });
+</script>

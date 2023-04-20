@@ -1,0 +1,18 @@
+---
+import SITE from '~/utils/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import Table from '~/components/widgets/Table.astro';
+
+const metadata = {
+  title: 'HackToFuture - Volunteers',
+  description: SITE.description,
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout {metadata}>
+  <Table 
+    title="Volunteers"
+    subtitle="List of volunteers"
+  />
+</Layout>

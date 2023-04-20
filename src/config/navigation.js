@@ -16,12 +16,21 @@ export const header = {
       href: getPermalink('#timeline'),
     },
     {
-      text: 'FAQ',
-      href: getPermalink('#faq'),
+      text: 'Guidelines',
+      links: [
+        {
+          text: 'FAQ',
+          href: '#faq',
+        },
+        {
+          text: 'Submission',
+          href: 'https://drive.google.com/file/d/1nAd7G8zFlstdi31jyJMX7gafvsFcT2tf/view',
+        },
+      ],
     },
     {
-      text: 'Criteria',
-      href: 'https://drive.google.com/file/d/1nAd7G8zFlstdi31jyJMX7gafvsFcT2tf/view'
+      text: 'Volunteers',
+      href: getPermalink('/volunteers')
     }
   ],
   actions: [],

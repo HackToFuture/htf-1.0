@@ -15,10 +15,10 @@ export const header = {
       text: 'Timeline',
       href: getPermalink('#timeline'),
     },
-    {
-      text: 'Map',
-      href: getPermalink('/map'),
-    },
+    // {
+    //   text: 'Map',
+    //   href: getPermalink('/map'),
+    // },
     {
       text: 'Guidelines',
       links: [

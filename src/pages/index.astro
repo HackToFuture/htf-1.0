@@ -3,6 +3,7 @@ import SITE from '~/utils/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Map from '~/components/widgets/Map.jsx';
 import CountDown from '~/components/widgets/Countdown.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -40,16 +41,15 @@ const metadata = {
       >
       <br />
       <br />
-      
+
       <span class="ext-sm sm:text-lg font-semibold">
         Hackathon begins in
         <CountDown />
       </span>
-      
+
       <br />
     </Fragment>
   </Hero>
-
   <did id="about">
     <Content
       title="About EG"
@@ -64,6 +64,7 @@ const metadata = {
       }}
       link="https://global.eg.dk/"
     />
+
     <Content
       isAfterContent={true}
       isReversed={true}

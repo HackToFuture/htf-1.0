@@ -16,6 +16,10 @@ export const header = {
       href: getPermalink('#timeline'),
     },
     {
+      text: 'Map',
+      href: getPermalink('/map'),
+    },
+    {
       text: 'Guidelines',
       links: [
         {
@@ -28,10 +32,6 @@ export const header = {
         },
       ],
     },
-    {
-      text: 'Volunteers',
-      href: getPermalink('/volunteers')
-    }
   ],
   actions: [],
 };

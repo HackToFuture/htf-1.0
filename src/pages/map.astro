@@ -1,0 +1,16 @@
+---
+import SITE from '~/utils/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'HackToFuture - Volunteers',
+  description: SITE.description,
+  ignoreTitleTemplate: true,
+};
+---
+<Layout>
+  <div class="px-24"></div>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.302/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/MkKIeHHUF5d1vao8/scene.splinecode"></spline-viewer>
+</Layout>
+

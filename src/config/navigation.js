@@ -32,6 +32,10 @@ export const header = {
         },
       ],
     },
+    {
+      text: 'Volunteers',
+      href: getPermalink('/volunteers')
+    }
   ],
   actions: [],
 };

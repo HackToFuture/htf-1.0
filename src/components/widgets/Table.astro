@@ -36,9 +36,7 @@ const {
       <thead>
         <tr>
           <th class="py-3 px-6 text-left text-sm font-bold uppercase border-b border-gray-200">Name</th>
-          <th class="py-3 px-6 text-left text-sm font-bold uppercase border-b border-gray-200">Committees</th>
           <th class="py-3 px-6 text-left text-sm font-bold uppercase border-b border-gray-200">Contact</th>
-          <th class="py-3 px-6 text-left text-sm font-bold uppercase border-b border-gray-200"></th>
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-200">
@@ -46,11 +44,10 @@ const {
           volunteers.map((vol) => (
             <tr>
               <td class="py-4 px-6">{vol.name}</td>
-              <td class="py-4 px-6">{vol.committees.join(', ')}</td>
+              
               <td class="py-4 px-6">
                 <a href={`tel:${vol.contact}`}>{vol.contact}</a>
               </td>
-              <td class="py-4 px-6" />
             </tr>
           ))
         }

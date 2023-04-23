@@ -1,0 +1,82 @@
+---
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  highlight,
+} = Astro.props;
+---
+
+<div class="m-10 max-w-xl sm:mx-auto lg:max-w-2xl">
+  {
+    (title || subtitle || highlight) && (
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        {highlight && (
+          <p
+            class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"
+            set:html={highlight}
+          />
+        )}
+        {title && (
+          <h2
+            class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+            set:html={title}
+          />
+        )}
+
+        {subtitle && (
+          <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+        )}
+      </div>
+    )
+  }
+</div>
+<div class="container mx-auto">
+  <div class="tabs-container">
+    <ul class="flex flex-col sm:flex-row justify-center items-center border-b border-gray-200 list-none p-4">
+      <li class="sm:w-auto">
+        <a href="#" class="block py-2 px-4 text-gray-700 dark:text-white font-medium tab-link" data-target="#tab1">
+          3-D View
+        </a>
+      </li>
+      <li class="sm:w-auto">
+        <a href="#" class="block py-2 px-4 text-gray-700 dark:text-white font-medium tab-link" data-target="#tab2">
+          2-D View
+        </a>
+      </li>
+    </ul>
+    <div class="p-4 flex-grow">
+      <div id="tab1" class="tab-content hidden">
+        <div class="h-screen">
+          <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.302/build/spline-viewer.js"></script>
+          <spline-viewer
+            style={{ height: '100%', overflow: 'hidden' }}
+            loading-anim
+            url="https://prod.spline.design/Dh3JWkADwNMzg6uz/scene.splinecode"></spline-viewer>
+        </div>
+      </div>
+      <div id="tab2" class="tab-content hidden">
+        <div class="flex items-center justify-center">
+          <div class="max-w-full">
+            <img src="https://i.imgur.com/ZoZYuGA.jpg" alt="College Map" class="mx-auto object-contain" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+// Get all tab links and add click event listener
+const tabLinks = document.querySelectorAll('.tab-link');
+tabLinks.forEach((tabLink) => {
+  tabLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Get the target tab content
+    const target = document.querySelector(e.target!.getAttribute('data-target'));
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach((tabContent) => tabContent.classList.add('hidden'));
+    // Show the target tab content
+    target.classList.remove('hidden');
+  });
+});
+</script>

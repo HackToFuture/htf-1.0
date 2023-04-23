@@ -3,7 +3,6 @@ import SITE from '~/utils/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Map from '~/components/widgets/Map.jsx';
 import CountDown from '~/components/widgets/Countdown.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -15,6 +14,8 @@ import Third from '~/assets/lottie/third.lottie';
 import Fourth from '~/assets/lottie/fourth.lottie';
 import Prize from '~/components/widgets/Prize.astro';
 import Content from '~/components/widgets/Content.astro';
+import Info from '~/components/widgets/Info.astro';
+import Table from '~/components/widgets/Table.astro';
 
 const metadata = {
   title: 'HackToFuture',
@@ -79,7 +80,9 @@ const metadata = {
       link="https://sjec.ac.in/"
     />
   </did>
-
+  <div id="teams">
+    <Info title="Teams" />
+  </div>
   <div id="prize">
     <Prize
       title="₹ 1,60,000"
@@ -123,7 +126,6 @@ const metadata = {
       ]}
     />
   </div>
-
   <div id="timeline">
     <Steps
       title="Timeline"
@@ -194,5 +196,8 @@ const metadata = {
         },
       ]}
     />
+  </div>
+  <div id="volunteers">
+    <Table title="Volunteers" />
   </div>
 </Layout>

@@ -1,0 +1,101 @@
+---
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  highlight,
+} = Astro.props;
+---
+
+<div class="m-10 max-w-xl sm:mx-auto lg:max-w-2xl">
+  {
+    (title || subtitle || highlight) && (
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        {highlight && (
+          <p
+            class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"
+            set:html={highlight}
+          />
+        )}
+        {title && (
+          <h2
+            class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+            set:html={title}
+          />
+        )}
+
+        {subtitle && (
+          <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+        )}
+      </div>
+    )
+  }
+</div>
+<div class="container mx-auto">
+  <div class="tabs-container">
+    <ul class="flex flex-col sm:flex-row justify-center items-center border-b border-gray-200 list-none p-4">
+      <li class="sm:w-auto">
+        <a href="#" class="block py-2 px-4 text-gray-700 dark:text-white font-medium" data-category="Social Innovation">
+          Social Innovation
+        </a>
+      </li>
+      <li class="sm:w-auto">
+        <a href="#" class="block py-2 px-4 text-gray-700 dark:text-white font-medium" data-category="Finance">
+          Finance
+        </a>
+      </li>
+      <li class="sm:w-auto">
+        <a href="#" class="block py-2 px-4 text-gray-700 dark:text-white font-medium" data-category="Healthcare">
+          Healthcare
+        </a>
+      </li>
+      <li class="sm:w-auto">
+        <a
+          href="#"
+          class="block py-2 px-4 text-gray-700 dark:text-white font-medium"
+          data-category="Energy and Sustainability"
+        >
+          Energy and Sustainability
+        </a>
+      </li>
+    </ul>
+    <div id="tab-content" class="p-4 flex-grow"></div>
+  </div>
+</div>
+<script>
+  import { teamdata } from '~/utils/data';
+  const tabLinks = document.querySelectorAll('.tabs-container ul li a');
+  const tabContent = document.getElementById('tab-content');
+
+  // Add click event listeners to tab links
+  tabLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      // Remove active class from all tab links
+      tabLinks.forEach(function (tabLink) {
+        tabLink.classList.remove('active-tab');
+      });
+      // Add active class to clicked tab link
+      this.classList.add('active-tab');
+      // Filter data based on selected category
+      const category = this.dataset.category;
+      const categoryData = Object.values(teamdata).filter(function (item) {
+        return item.Category === category;
+      });
+      // Create HTML content for tab content area
+      let content = '<ul class="p-4">';
+      categoryData.forEach(function (item) {
+        content += '<li class="mb-2"><strong>Team Name:</strong> ' + item['Team Name'] + '</li>';
+        content += '<li class="mb-2"><strong>College Name:</strong> ' + item['College Name'] + '</li>';
+        content += '<li class="mb-2"><strong>Team Leader:</strong> ' + item['Team Leader'] + '</li>';
+        content += '<li class="mb-2"><strong>Team Members:</strong> ' + item.Participants.join(', ') + '</li>';
+        content += '<hr class="my-4">';
+      });
+      content += '</ul>';
+      // Update tab content area with created HTML content
+      tabContent!.innerHTML = content;
+    });
+  });
+
+  // Show default tab on page load
+  tabLinks[0].click();
+</script>

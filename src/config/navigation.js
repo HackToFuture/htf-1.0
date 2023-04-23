@@ -4,6 +4,14 @@ import { getPermalink } from '../utils/permalinks';
 export const header = {
   links: [
     {
+      text: 'Teams',
+      href: getPermalink('#teams'),
+    },
+    {
+      text: 'Map',
+      href: getPermalink('/map'),
+    },
+    {
       text: 'Prize',
       href: getPermalink('#prize'),
     },
@@ -15,10 +23,6 @@ export const header = {
       text: 'Timeline',
       href: getPermalink('#timeline'),
     },
-    // {
-    //   text: 'Map',
-    //   href: getPermalink('/map'),
-    // },
     {
       text: 'Guidelines',
       links: [
